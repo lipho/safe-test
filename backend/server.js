@@ -27,9 +27,9 @@ app.use(express.static(publicPath));
 app.get('/api/', function(req, res) {
   'use strict'
   let config = {
-    user: '***REMOVED***',
-    password: '***REMOVED***',
-    server: '***REMOVED***',
+    user: ***REMOVED***,
+    password: ***REMOVED***,
+    server: ***REMOVED***,
     port: 4443,
     database: 'BODB'
   }
@@ -44,6 +44,9 @@ app.get('/api/', function(req, res) {
   });
 })
 
+app.get('/membersession', function(req, res) {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(publicPath, 'index.html'));
