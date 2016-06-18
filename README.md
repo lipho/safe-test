@@ -1,1 +1,1 @@
-http://lipho.net/safe-test
+safe test
