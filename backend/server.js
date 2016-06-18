@@ -6,7 +6,7 @@ var proxy = httpProxy.createProxyServer();
 var app = express();
 
 var isProduction = process.env.NODE_ENV === 'production';
-var host = process.env.APP_HOST || 'localhost';
+var host = isProduction ? 'safe.lipho.com' || 'localhost';
 var port = isProduction ? 9999 : 3000;
 var publicPath = path.resolve(__dirname, '..', 'public');
 var sql = require('mssql');
@@ -26,11 +26,10 @@ app.use(express.static(publicPath));
 // place your handlers here
 app.get('/api/', function(req, res) {
   'use strict'
-  let config = {}
+
   
   sql.connect(config).then(function(){
     new sql.Request().query('select * from MemberSession').then(function(x) {
-      console.dir(x);
       return res.json(x);
     }).catch(function(err) {
       console.log(err);
