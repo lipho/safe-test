@@ -7,7 +7,7 @@ var app = express();
 
 var isProduction = process.env.NODE_ENV === 'production';
 var host = process.env.APP_HOST || 'localhost';
-var port = isProduction ? 8080 : 3000;
+var port = isProduction ? 9999 : 3000;
 var publicPath = path.resolve(__dirname, '..', 'public');
 var sql = require('mssql');
 
