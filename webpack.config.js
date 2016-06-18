@@ -52,7 +52,6 @@ var config = {
           'image?bypassOnDebug&optimizationLevel=7&interlaced=false'
         ]
       }
-
     ]
   },
   postcss: [autoprefixer],

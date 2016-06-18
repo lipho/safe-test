@@ -26,11 +26,9 @@ app.use(express.static(publicPath));
 // place your handlers here
 app.get('/api/', function(req, res) {
   'use strict'
-  let config = {
-  }
+  let config = {}
   
   sql.connect(config).then(function(){
-
     new sql.Request().query('select * from MemberSession').then(function(x) {
       console.dir(x);
       return res.json(x);
