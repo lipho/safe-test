@@ -44,6 +44,9 @@ app.get('/api/', function(req, res) {
   });
 })
 
+app.get('/membersession', function(req, res) {
+  res.sendFile(path.join(publicPath, 'index.html'));
+});
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(publicPath, 'index.html'));
