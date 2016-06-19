@@ -27,11 +27,11 @@ app.use(express.static(publicPath));
 app.get('/api/', function(req, res) {
   'use strict'
   let config = {
-    user: ***REMOVED***,
-    password: ***REMOVED***,
-    server: ***REMOVED***,
+    user: 'x',
+    password: 'x',
+    server: 'x',
     port: 4443,
-    database: 'BODB'
+    database: 'x'
   }
   
   sql.connect(config).then(function(){
