@@ -32,7 +32,7 @@ app.get('/api/', function(req, res) {
     server: 'x',
     port: 4443,
     database: 'x'
-  }
+  };
   
   sql.connect(config).then(function(){
     new sql.Request().query('select * from MemberSession').then(function(x) {
